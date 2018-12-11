@@ -1,16 +1,17 @@
 #!/usr/bin/python3
 
+from blist import *
 import numpy as np
 import random
 #Input data
-#lastMarble=70953*100;
-#Nplayers = 405;
-lastMarble=1618;
-Nplayers = 10;
+lastMarble=70953*100;
+Nplayers = 405;
+#lastMarble=1618;
+#Nplayers = 10;
 remaining = [int(x) for x in range(lastMarble,1,-1)];
 score=[int(0) for x in range(0,Nplayers)];
 
-circle=[int(0),int(1)];
+circle=blist([int(0),int(1)]);
 current = 1;
 player=0;
 
@@ -39,7 +40,7 @@ while (len(remaining)>0):
     #    else:
     #        print(" {}  ".format(circle[ndx]),end='');
     #print("");       
-    if len(remaining)%10000==0:
+    if len(remaining)%1000000==0:
         print("Remaining: {}".format(len(remaining)))
 
 # Print solution
